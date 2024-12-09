@@ -1,28 +1,32 @@
 package com.example.lab7_jt.entities;
 
 import jakarta.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.UUID;
 
 @Entity
+@Table(name = "users")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue
+    private UUID id;
 
-    @Column(nullable = false, unique = true)
+    @Column(unique = true, nullable = false)
     private String username;
 
     @Column(nullable = false)
     private String password;
 
-    @Column(nullable = false)
-    private String role;
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<UserRole> roles = new HashSet<>();
 
-    // Getters and setters
-    public Long getId() {
+    // Getters and Setters
+    public UUID getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
@@ -42,11 +46,11 @@ public class User {
         this.password = password;
     }
 
-    public String getRole() {
-        return role;
+    public Set<UserRole> getRoles() {
+        return roles;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setRoles(Set<UserRole> roles) {
+        this.roles = roles;
     }
 }

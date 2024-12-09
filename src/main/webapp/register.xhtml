@@ -6,14 +6,21 @@
 </h:head>
 <h:body>
     <h:form>
-        <h:inputText value="#{userBean.user.username}" placeholder="Username" />
-        <h:inputSecret value="#{userBean.user.password}" placeholder="Password" />
-        <h:selectOneMenu value="#{userBean.role}">
-            <f:selectItem itemValue="student" itemLabel="Student" />
-            <f:selectItem itemValue="teacher" itemLabel="Teacher" />
-            <f:selectItem itemValue="admin" itemLabel="Admin" />
-        </h:selectOneMenu>
-        <h:commandButton value="Register" action="#{userBean.register}" />
+        <h:panelGrid columns="2" cellpadding="5">
+            <h:outputLabel for="username" value="Username:" />
+            <h:inputText id="username" value="#{authBean.username}" />
+
+            <h:outputLabel for="password" value="Password:" />
+            <h:inputSecret id="password" value="#{authBean.password}" />
+
+            <h:outputLabel for="role" value="Role:" />
+            <h:selectOneMenu id="role" value="#{authBean.role}">
+                <f:selectItem itemValue="Student" itemLabel="Student" />
+                <f:selectItem itemValue="Teacher" itemLabel="Teacher" />
+                <f:selectItem itemValue="Admin" itemLabel="Admin" />
+            </h:selectOneMenu>
+        </h:panelGrid>
+        <h:commandButton value="Register" action="#{authBean.register}" />
     </h:form>
 </h:body>
 </html>

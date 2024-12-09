@@ -7,9 +7,9 @@
     <class>com.example.lab7_jt.entities.User</class>
     <class>com.example.lab7_jt.entities.Evaluation</class>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/lab4"/>
-      <property name="javax.persistence.jdbc.user" value="postgres"/>
-      <property name="javax.persistence.jdbc.password" value="test123"/>
+      <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/lab4"/>
+      <property name="jakarta.persistence.jdbc.user" value="postgres"/>
+      <property name="jakarta.persistence.jdbc.password" value="test123"/>
       <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
       <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
       <property name="hibernate.show_sql" value="true"/>
