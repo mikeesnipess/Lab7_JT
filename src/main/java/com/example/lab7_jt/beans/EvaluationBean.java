@@ -5,9 +5,7 @@ import com.example.lab7_jt.entities.User;
 import com.example.lab7_jt.service.EvaluationService;
 import com.example.lab7_jt.service.UserService;
 import jakarta.annotation.PostConstruct;
-import jakarta.enterprise.context.RequestScoped;
 import jakarta.enterprise.context.SessionScoped;
-import jakarta.faces.annotation.ManagedProperty;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
 
@@ -24,7 +22,6 @@ public class EvaluationBean  implements Serializable {
     private String activityType;
     private Integer grade;
     private String comment;
-    //private User selectedTeacher; // To hold the selected teacher
     private User teacher; // To hold the selected teacher
     private List<User> teachers;  // List of teachers for the dropdown
     private String successMessage;
@@ -83,14 +80,6 @@ public class EvaluationBean  implements Serializable {
     public void setSuccessMessage(String successMessage) {
         this.successMessage = successMessage;
     }
-
-//    public User getSelectedTeacher() {
-//        return selectedTeacher;
-//    }
-//
-//    public void setSelectedTeacher(User selectedTeacher) {
-//        this.selectedTeacher = selectedTeacher;
-//    }
 
     public List<User> getTeachers() {
         return teachers;

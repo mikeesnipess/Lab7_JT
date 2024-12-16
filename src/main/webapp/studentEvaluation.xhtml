@@ -4,15 +4,19 @@
 <h:body>
     <h:form>
         <!-- Input field for activity -->
+        <h:outputLabel value="Activity:" />
         <h:inputText value="#{evaluationBean.activity}" placeholder="Activity" />
 
         <!-- Input field for activity type -->
+        <h:outputLabel value="Activity Type:" />
         <h:inputText value="#{evaluationBean.activityType}" placeholder="Activity Type" />
 
         <!-- Input field for grade -->
+        <h:outputLabel value="Grade:" />
         <h:inputText value="#{evaluationBean.grade}" placeholder="Grade" />
 
         <!-- Input field for comment -->
+        <h:outputLabel value="Comment:" />
         <h:inputTextarea value="#{evaluationBean.comment}" placeholder="Comment" />
 
         <!-- Dropdown for selecting a teacher -->

@@ -1,8 +1,6 @@
 package com.example.lab7_jt.beans;
 
 import com.example.lab7_jt.entities.User;
-import jakarta.ejb.EJB;
-import jakarta.enterprise.context.RequestScoped;
 import jakarta.enterprise.context.SessionScoped;
 import jakarta.faces.component.UIComponent;
 import jakarta.faces.context.FacesContext;
@@ -11,7 +9,6 @@ import jakarta.faces.convert.FacesConverter;
 import com.example.lab7_jt.service.UserService;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
-import org.hibernate.service.spi.InjectService;
 
 import java.io.Serializable;
 import java.util.UUID;
